@@ -14,4 +14,7 @@ catch exception
 end
 
 % Defining constants
-const = Constants();
+% const = Constants();
+
+var = jsondecode(fileread('Project.json'));
+% TODO foreach each constant, eval the dynamic variable
