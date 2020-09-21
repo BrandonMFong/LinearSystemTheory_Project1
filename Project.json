@@ -5,7 +5,10 @@
         { "Path": "./src" },
         { "Path": "./src/save" },
         { "Path": "./src/misc" },
-        { "Path": "./src/Functions" }
+        { "Path": "./src/Prob1" },
+        { "Path": "./src/Prob2" },
+        { "Path": "./src/Prob3" },
+        { "Path": "./src/Prob4" }
     ],
     "Save": [{
         }
