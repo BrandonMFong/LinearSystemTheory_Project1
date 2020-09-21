@@ -1,0 +1,13 @@
+{
+    "Constants": {
+    },
+    "Paths": [
+        { "Path": "./src" },
+        { "Path": "./src/save" },
+        { "Path": "./src/misc" },
+        { "Path": "./src/Functions" }
+    ],
+    "Save": [{
+        }
+    ]
+}
