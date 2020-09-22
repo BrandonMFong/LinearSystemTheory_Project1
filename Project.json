@@ -1,6 +1,11 @@
 {
     "Constants": {
-        "Infinity": 100000
+        "Infinity": 100000,
+        "tmin":-100,
+        "tmax":100,
+        "tinc":0.01,
+        "V": 1,
+        "omega": "2*pi"
     },
     "Paths": [
         { "Path": "./src" },
