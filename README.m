@@ -12,6 +12,7 @@ Setup
 % Problem 1: Fourier series of a square wave.
 % M-file name: src\Fourier.m
 % Notes: 
+%       - In the script you will see that a square wave is the sum of a sine function for each odd increment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ProblemOne
