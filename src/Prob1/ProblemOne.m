@@ -1,7 +1,7 @@
 % Fourier series of a square wave.
 
 fprintf('Problem 1!\n');
-fprintf('Infinity value: %d\n', var.Constants.Problem1.Infinity);
+fprintf('Infinity value: %d\n', var.Constants.Constant.Problem1.Infinity);
 
 fprintf('Testing square wave with input of t=1\n');
 results = SquareWave(1,2*pi,1);
@@ -9,18 +9,18 @@ if ~isempty(results)
     fprintf('results is not empty\n');
 end 
 
-max = ((abs(var.Constants.Problem1.tmin) + abs(var.Constants.Problem1.tmax))/var.Constants.Problem1.tinc);
+max = ((abs(var.Constants.Constant.Problem1.tmin) + abs(var.Constants.Constant.Problem1.tmax))/var.Constants.Constant.Problem1.tinc);
 y = zeros(1,max);
 idx = 1;
 
 StatusRowOut = waitbar(0,sprintf('Calculating Square wave (main loop)')); % init progress
-for t = var.Constants.Problem1.tmin : var.Constants.Problem1.tinc : var.Constants.Problem1.tmax
-    y(1,idx) = SquareWave(t,eval(var.Constants.Problem1.omega),var.Constants.Problem1.V);
+for t = var.Constants.Constant.Problem1.tmin : var.Constants.Constant.Problem1.tinc : var.Constants.Constant.Problem1.tmax
+    y(1,idx) = SquareWave(t,eval(var.Constants.Constant.Problem1.omega),var.Constants.Constant.Problem1.V);
     idx = idx + 1;
     waitbar((idx)/(max),StatusRowOut,sprintf('Calculating Square wave (main loop)'));  % update progress
 end
 close(StatusRowOut); % terminate progress
-t = var.Constants.Problem1.tmin : var.Constants.Problem1.tinc : var.Constants.Problem1.tmax
+t = var.Constants.Constant.Problem1.tmin : var.Constants.Constant.Problem1.tinc : var.Constants.Constant.Problem1.tmax
 plot(t,y);
 ylim([-7 7]);
 

@@ -2,29 +2,30 @@
     "Constants": 
     [
         {
-            "Problem1":
+            "Constant":
             {
-                "Infinity": 1000,
-                "tmin":-4,
-                "tmax":4,
-                "tinc":0.1,
-                "V": 5,
-                "omega": "2*pi",
-                "ymax":7,
-                "ymin":7
-            }
-        },
-        {
-            "Problem2":
-            {
-                "Infinity": 1000,
-                "tmin":-4,
-                "tmax":4,
-                "tinc":0.1,
-                "ymax":7,
-                "ymin":7,
-                "FundamentalPeriod":5,
-                "Omega0":"2*pi"
+                "Problem1":
+                {
+                    "Infinity": 1000,
+                    "tmin":-4,
+                    "tmax":4,
+                    "tinc":0.1,
+                    "V": 5,
+                    "omega": "2*pi",
+                    "ymax":7,
+                    "ymin":7
+                },
+                "Problem2":
+                {
+                    "Infinity": 1000,
+                    "tmin":-4,
+                    "tmax":4,
+                    "tinc":0.1,
+                    "ymax":7,
+                    "ymin":7,
+                    "FundamentalPeriod":5,
+                    "Omega0":"2*pi"
+                }
             }
         }
     ],
