@@ -13,6 +13,19 @@
                 "ymax":7,
                 "ymin":7
             }
+        },
+        {
+            "Problem2":
+            {
+                "Infinity": 1000,
+                "tmin":-4,
+                "tmax":4,
+                "tinc":0.1,
+                "ymax":7,
+                "ymin":7,
+                "FundamentalPeriod":5,
+                "Omega0":"2*pi"
+            }
         }
     ],
     "Paths": [
