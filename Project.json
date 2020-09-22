@@ -1,9 +1,9 @@
 {
     "Constants": {
-        "Infinity": 100000,
-        "tmin":-100,
-        "tmax":100,
-        "tinc":0.01,
+        "Infinity": 100,
+        "tmin":-70,
+        "tmax":70,
+        "tinc":0.1,
         "V": 1,
         "omega": "2*pi"
     },
