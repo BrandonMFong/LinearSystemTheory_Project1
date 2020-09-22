@@ -4,8 +4,6 @@
     },
     "Paths": [
         { "Path": "./src" },
-        { "Path": "./src/save" },
-        { "Path": "./src/misc" },
         { "Path": "./src/Prob1" },
         { "Path": "./src/Prob2" },
         { "Path": "./src/Prob3" },

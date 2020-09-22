@@ -1,6 +1,8 @@
 format long
 clear
+
 try 
+    global var;
     var = jsondecode(fileread('Project.json'));
 
     % make output dir
@@ -15,13 +17,7 @@ try
         addpath(var.Paths(r).Path);
     end
 
-    % Define constants used in this project
-    % for c = 1:size(var.Constants.Constant,1)
-    %     fprintf('Name: %s\n', var.Constants(c).Constant.Name);
-    %     fprintf('Value: %s\n', var.Constants(c).Constant.Value);
-    %     eval([var.Constants(c).Constant.Name , ' = ', var.Constants(c).Constant.Value, ';']);
-    % end 
-
 catch exception
     throw(exception)
 end
+
