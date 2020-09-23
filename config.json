@@ -57,7 +57,8 @@
                     "ymin":-1,
                     "V":5,
                     "t0":0,
-                    "T":2
+                    "T":2,
+                    "TimeScalingFactor": 5
                 }
             }
         }

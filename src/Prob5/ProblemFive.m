@@ -1,20 +1,41 @@
-% Rectangular function and its Fourier Transform
+% Time Scaling 
 
-fprintf('Problem 4!\n');
+fprintf('Problem 5!\n');
 
-max = ((abs(const.Problem4.tmin) + abs(const.Problem4.tmax))/const.Problem4.tinc);
+%%% TIME DOMAIN
+fprintf('\nTime scaling in the time domain with the rect() function \n');
+
+max = ((abs(const.Problem5.tmin) + abs(const.Problem5.tmax))/const.Problem5.tinc);
 y = zeros(1,max);
 idx = 1;
-StatusRowOut = waitbar(0,sprintf('Calculating Rect function (main loop)')); % init progress
-for t = const.Problem4.tmin : const.Problem4.tinc : const.Problem4.tmax
-    y(1,idx) = const.Problem4.V * rect((t-const.Problem4.t0)/const.Problem4.T);
+StatusRowOut = waitbar(0,sprintf('Calculating Rect function before time scaling (main loop)')); % init progress
+for t = const.Problem5.tmin : const.Problem5.tinc : const.Problem5.tmax
+    y(1,idx) = const.Problem5.V * rect((t-const.Problem5.t0)/const.Problem5.T);
     idx = idx + 1;
     waitbar((idx)/(max),StatusRowOut,sprintf('Calculating Rect function (main loop)'));  % update progress
 end
 close(StatusRowOut); % terminate progress
 
-t = const.Problem4.tmin : const.Problem4.tinc : const.Problem4.tmax
+t = const.Problem5.tmin : const.Problem5.tinc : const.Problem5.tmax
 % hold on 
-figure('Name','Rect');
+figure('Name','Rect, before time scaling');
 plot(t,y);
-ylim([const.Problem4.ymin const.Problem4.ymax]);
+ylim([const.Problem5.ymin const.Problem5.ymax]);
+
+%% TIME SCALING 
+max = ((abs(const.Problem5.tmin) + abs(const.Problem5.tmax))/const.Problem5.tinc);
+y = zeros(1,max);
+idx = 1;
+StatusRowOut = waitbar(0,sprintf('Calculating Rect function (main loop)')); % init progress
+for t = const.Problem5.tmin : const.Problem5.tinc : const.Problem5.tmax
+    y(1,idx) = const.Problem5.V * rect((const.Problem5.TimeScalingFactor*(t-const.Problem5.t0))/const.Problem5.T);
+    idx = idx + 1;
+    waitbar((idx)/(max),StatusRowOut,sprintf('Calculating Rect function after time scaling (main loop)'));  % update progress
+end
+close(StatusRowOut); % terminate progress
+
+t = const.Problem5.tmin : const.Problem5.tinc : const.Problem5.tmax
+% hold on 
+figure('Name','Rect, after time scaling');
+plot(t,y);
+ylim([const.Problem5.ymin const.Problem5.ymax]);
