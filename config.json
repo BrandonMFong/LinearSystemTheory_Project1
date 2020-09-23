@@ -47,6 +47,17 @@
                     "V":5,
                     "t0":0,
                     "T":2
+                },
+                "Problem5":
+                {
+                    "tmin":-6,
+                    "tmax":6,
+                    "tinc":0.1,
+                    "ymax":6,
+                    "ymin":-1,
+                    "V":5,
+                    "t0":0,
+                    "T":2
                 }
             }
         }
@@ -57,6 +68,7 @@
         { "Path": "./src/Prob2" },
         { "Path": "./src/Prob3" },
         { "Path": "./src/Prob4" },
+        { "Path": "./src/Prob5" },
         { "Path": "./src/functions" }
     ],
     "Save": [{
