@@ -19,6 +19,8 @@ figure('Name','Rect');
 plot(t,y);
 ylim([const.Problem4.ymin const.Problem4.ymax]);
 
+% TODO do fourier transform 
+% might need to do the one from the project sheet 
 max = ((abs(const.Problem4.tmin) + abs(const.Problem4.tmax))/const.Problem4.tinc);
 y = zeros(1,max);
 idx = 1;
@@ -36,5 +38,3 @@ figure('Name','Rect');
 plot(t,y);
 ylim([const.Problem4.ymin const.Problem4.ymax]);
 
-
-% TODO do fourier transform 
