@@ -2,8 +2,9 @@ format long
 clear
 
 try 
-    global var;
-    var = jsondecode(fileread('Project.json'));
+    global const;
+    var = jsondecode(fileread('config.json'));
+    const = var.Constants.Constant;
 
     % make output dir
     % probably do not need this 
