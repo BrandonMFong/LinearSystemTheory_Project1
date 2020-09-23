@@ -2,15 +2,19 @@
 
 fprintf('Problem 4!\n');
 
-max = ((abs(const.Problem3.tmin) + abs(const.Problem3.tmax))/const.Problem3.tinc);
+max = ((abs(const.Problem4.tmin) + abs(const.Problem4.tmax))/const.Problem4.tinc);
 y = zeros(1,max);
 idx = 1;
-for t = const.Problem3.tmin : const.Problem3.tinc : const.Problem3.tmax
-    y(1,idx) = const.Problem3.V * rect((t-const.Problem3.t0)/const.Problem3.T);
+StatusRowOut = waitbar(0,sprintf('Calculating Rect function (main loop)')); % init progress
+for t = const.Problem4.tmin : const.Problem4.tinc : const.Problem4.tmax
+    y(1,idx) = const.Problem4.V * rect((t-const.Problem4.t0)/const.Problem4.T);
     idx = idx + 1;
+    waitbar((idx)/(max),StatusRowOut,sprintf('Calculating Rect function (main loop)'));  % update progress
 end
+close(StatusRowOut); % terminate progress
 
-t = const.Problem3.tmin : const.Problem3.tinc : const.Problem3.tmax
-hold on 
+t = const.Problem4.tmin : const.Problem4.tinc : const.Problem4.tmax
+% hold on 
+figure('Name','Rect');
 plot(t,y);
-ylim([const.Problem3.ymin const.Problem3.ymax]);
+ylim([const.Problem4.ymin const.Problem4.ymax]);

@@ -20,7 +20,8 @@ for t = const.Problem1.tmin : const.Problem1.tinc : const.Problem1.tmax
     waitbar((idx)/(max),StatusRowOut,sprintf('Calculating Square wave (main loop)'));  % update progress
 end
 close(StatusRowOut); % terminate progress
-t = const.Problem1.tmin : const.Problem1.tinc : const.Problem1.tmax
+t = const.Problem1.tmin : const.Problem1.tinc : const.Problem1.tmax;
+figure('Name','Square Wave');
 plot(t,y);
 ylim([const.Problem1.ymin const.Problem1.ymax]);
 
