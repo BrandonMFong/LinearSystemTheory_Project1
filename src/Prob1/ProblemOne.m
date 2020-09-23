@@ -22,7 +22,7 @@ end
 close(StatusRowOut); % terminate progress
 t = var.Constants.Constant.Problem1.tmin : var.Constants.Constant.Problem1.tinc : var.Constants.Constant.Problem1.tmax
 plot(t,y);
-ylim([-7 7]);
+ylim([var.Constants.Constant.Problem1.ymin var.Constants.Constant.Problem1.ymax]);
 
 % from text 
 % syms C1 ker t
