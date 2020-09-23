@@ -11,6 +11,6 @@ for t = const.Problem3.tmin : const.Problem3.tinc : const.Problem3.tmax
 end
 
 t = const.Problem3.tmin : const.Problem3.tinc : const.Problem3.tmax
-% hold on 
+hold on 
 plot(t,y);
 ylim([const.Problem3.ymin const.Problem3.ymax]);
