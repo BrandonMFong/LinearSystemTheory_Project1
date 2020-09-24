@@ -1,41 +1,15 @@
 % Time Scaling 
-
+% time scaling 
 fprintf('Problem 5!\n');
 
-%%% TIME DOMAIN
-fprintf('\nTime scaling in the time domain with the rect() function \n');
-
-max = ((abs(const.Problem5.tmin) + abs(const.Problem5.tmax))/const.Problem5.tinc);
-y = zeros(1,max);
-idx = 1;
-StatusRowOut = waitbar(0,sprintf('Calculating Rect function before time scaling (main loop)')); % init progress
-for t = const.Problem5.tmin : const.Problem5.tinc : const.Problem5.tmax
-    y(1,idx) = const.Problem5.V * rect((t-const.Problem5.t0)/const.Problem5.T);
-    idx = idx + 1;
-    waitbar((idx)/(max),StatusRowOut,sprintf('Calculating Rect function (main loop)'));  % update progress
-end
-close(StatusRowOut); % terminate progress
-
-t = const.Problem5.tmin : const.Problem5.tinc : const.Problem5.tmax
-% hold on 
-figure('Name','Rect, before time scaling');
-plot(t,y);
-ylim([const.Problem5.ymin const.Problem5.ymax]);
-
-%% TIME SCALING 
-max = ((abs(const.Problem5.tmin) + abs(const.Problem5.tmax))/const.Problem5.tinc);
-y = zeros(1,max);
-idx = 1;
-StatusRowOut = waitbar(0,sprintf('Calculating Rect function (main loop)')); % init progress
-for t = const.Problem5.tmin : const.Problem5.tinc : const.Problem5.tmax
-    y(1,idx) = const.Problem5.V * rect((const.Problem5.TimeScalingFactor*(t-const.Problem5.t0))/const.Problem5.T);
-    idx = idx + 1;
-    waitbar((idx)/(max),StatusRowOut,sprintf('Calculating Rect function after time scaling (main loop)'));  % update progress
-end
-close(StatusRowOut); % terminate progress
-
-t = const.Problem5.tmin : const.Problem5.tinc : const.Problem5.tmax
-% hold on 
-figure('Name','Rect, after time scaling');
-plot(t,y);
-ylim([const.Problem5.ymin const.Problem5.ymax]);
+syms t w 
+T = 0.5;
+x1 = (heaviside(T-t)-heaviside(-T-t));
+figure(1), ezplot(x1, [-3,3]),grid,title('xl=rect(t/1)')
+T=0.1;
+x2=(heaviside(T-t)-heaviside(-T-t));
+figure(2),ezplot(x2,[-1,1]), grid, title('x2 = rect (t/0.2)')
+X1 = fourier(x1);
+X2 = fourier(x2);
+ezplot(X1,-20,20), grid, title('Xl=F(x1)')
+ezplot(X2, -100, 100), grid, title('X2 = F(x2)')

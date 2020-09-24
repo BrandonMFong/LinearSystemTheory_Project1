@@ -41,4 +41,12 @@ ProblemThree
 
 ProblemFour
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 5: Time Scaling property of the fourier transform 
+% M-file name: src\Prob1\ProblemFive.m
+% Notes: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ProblemFive
+
 %%% END %%%
